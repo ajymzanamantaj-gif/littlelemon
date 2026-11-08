@@ -1,0 +1,133 @@
+// !$*UTF8*$!
+{
+    archiveVersion = 1;
+    classes = {};
+    objectVersion = 56;
+    objects = {
+        A10000000000000000000001 /* LittleLemonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000001; };
+        A10000000000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000002; };
+        A10000000000000000000003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000003; };
+        B10000000000000000000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LittleLemonApp.swift; sourceTree = "<group>"; };
+        B10000000000000000000002 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+        B10000000000000000000003 = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+        B10000000000000000000004 = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Little Lemon.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+        C10000000000000000000001 = {
+            isa = PBXGroup;
+            children = (C10000000000000000000002, C10000000000000000000003,);
+            sourceTree = "<group>";
+        };
+        C10000000000000000000002 = {
+            isa = PBXGroup;
+            children = (B10000000000000000000001, B10000000000000000000002, B10000000000000000000003,);
+            path = "Little Lemon";
+            sourceTree = "<group>";
+        };
+        C10000000000000000000003 = {
+            isa = PBXGroup;
+            children = (B10000000000000000000004,);
+            name = Products;
+            sourceTree = "<group>";
+        };
+        D10000000000000000000001 = {
+            isa = PBXSourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (A10000000000000000000001, A10000000000000000000002,);
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        D10000000000000000000002 = {
+            isa = PBXFrameworksBuildPhase;
+            buildActionMask = 2147483647;
+            files = ();
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        D10000000000000000000003 = {
+            isa = PBXResourcesBuildPhase;
+            buildActionMask = 2147483647;
+            files = (A10000000000000000000003,);
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+        E10000000000000000000001 = {
+            isa = PBXNativeTarget;
+            buildConfigurationList = F10000000000000000000002;
+            buildPhases = (D10000000000000000000001, D10000000000000000000002, D10000000000000000000003,);
+            buildRules = ();
+            dependencies = ();
+            name = "Little Lemon";
+            productName = "Little Lemon";
+            productReference = B10000000000000000000004;
+            productType = "com.apple.product-type.application";
+        };
+        E10000000000000000000002 = {
+            isa = PBXProject;
+            attributes = { LastSwiftUpdateCheck = 1500; LastUpgradeCheck = 1500; };
+            buildConfigurationList = F10000000000000000000001;
+            compatibilityVersion = "Xcode 14.0";
+            developmentRegion = en;
+            hasScannedForEncodings = 0;
+            knownRegions = (en, Base,);
+            mainGroup = C10000000000000000000001;
+            productRefGroup = C10000000000000000000003;
+            projectDirPath = "";
+            projectRoot = "";
+            targets = (E10000000000000000000001,);
+        };
+        F10000000000000000000001 = {
+            isa = XCConfigurationList;
+            buildConfigurations = (F20000000000000000000001, F20000000000000000000002,);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+        F10000000000000000000002 = {
+            isa = XCConfigurationList;
+            buildConfigurations = (F20000000000000000000003, F20000000000000000000004,);
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+        F20000000000000000000001 /* Project Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = { CLANG_ENABLE_MODULES = YES; IPHONEOS_DEPLOYMENT_TARGET = 16.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; };
+            name = Debug;
+        };
+        F20000000000000000000002 /* Project Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = { CLANG_ENABLE_MODULES = YES; IPHONEOS_DEPLOYMENT_TARGET = 16.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; SWIFT_COMPILATION_MODE = wholemodule; };
+            name = Release;
+        };
+        F20000000000000000000003 /* App Debug */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                CODE_SIGN_STYLE = Automatic;
+                CURRENT_PROJECT_VERSION = 1;
+                ENABLE_PREVIEWS = YES;
+                GENERATE_INFOPLIST_FILE = YES;
+                INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+                INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+                INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+                MARKETING_VERSION = 1.0;
+                PRODUCT_BUNDLE_IDENTIFIER = org.example.LittleLemonStarter;
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+                TARGETED_DEVICE_FAMILY = "1,2";
+            };
+            name = Debug;
+        };
+        F20000000000000000000004 /* App Release */ = {
+            isa = XCBuildConfiguration;
+            buildSettings = {
+                CODE_SIGN_STYLE = Automatic;
+                CURRENT_PROJECT_VERSION = 1;
+                GENERATE_INFOPLIST_FILE = YES;
+                INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+                INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+                INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+                MARKETING_VERSION = 1.0;
+                PRODUCT_BUNDLE_IDENTIFIER = org.example.LittleLemonStarter;
+                PRODUCT_NAME = "$(TARGET_NAME)";
+                SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+                TARGETED_DEVICE_FAMILY = "1,2";
+            };
+            name = Release;
+        };
+    };
+    rootObject = E10000000000000000000002;
+}
