@@ -4,6 +4,14 @@
     classes = {};
     objectVersion = 56;
     objects = {
+        A10000000000000000000005 /* Guest.swift */ = {isa = PBXBuildFile; fileRef = B10000000000000000000005; };
+        B10000000000000000000005 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
+        A10000000000000000000006 /* HomeView.swift */ = {isa = PBXBuildFile; fileRef = B10000000000000000000006; };
+        B10000000000000000000006 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+        A10000000000000000000007 /* MenuData.swift */ = {isa = PBXBuildFile; fileRef = B10000000000000000000007; };
+        B10000000000000000000007 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuData.swift; sourceTree = "<group>"; };
+        A10000000000000000000008 /* menu.json */ = {isa = PBXBuildFile; fileRef = B10000000000000000000008; };
+        B10000000000000000000008 = {isa = PBXFileReference; lastKnownFileType = text.json; path = menu.json; sourceTree = "<group>"; };
         A10000000000000000000001 /* LittleLemonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000001; };
         A10000000000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000002; };
         A10000000000000000000003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000003; };
@@ -18,7 +26,7 @@
         };
         C10000000000000000000002 = {
             isa = PBXGroup;
-            children = (B10000000000000000000001, B10000000000000000000002, B10000000000000000000003,);
+            children = (B10000000000000000000001, B10000000000000000000002, B10000000000000000000003, B10000000000000000000005, B10000000000000000000006, B10000000000000000000007, B10000000000000000000008,);
             path = "Little Lemon";
             sourceTree = "<group>";
         };
@@ -31,7 +39,7 @@
         D10000000000000000000001 = {
             isa = PBXSourcesBuildPhase;
             buildActionMask = 2147483647;
-            files = (A10000000000000000000001, A10000000000000000000002,);
+            files = (A10000000000000000000001, A10000000000000000000002, A10000000000000000000005, A10000000000000000000006, A10000000000000000000007,);
             runOnlyForDeploymentPostprocessing = 0;
         };
         D10000000000000000000002 = {
@@ -43,7 +51,7 @@
         D10000000000000000000003 = {
             isa = PBXResourcesBuildPhase;
             buildActionMask = 2147483647;
-            files = (A10000000000000000000003,);
+            files = (A10000000000000000000003, A10000000000000000000008,);
             runOnlyForDeploymentPostprocessing = 0;
         };
         E10000000000000000000001 = {
