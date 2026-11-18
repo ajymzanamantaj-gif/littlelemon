@@ -1,0 +1,30 @@
+name: Build Little Lemon for iPhone Simulator
+on:
+  push:
+    branches: [simulator-preview]
+permissions:
+  contents: read
+jobs:
+  preview:
+    runs-on: macos-15
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and launch
+        run: |
+          set -eu
+          simulator=$(xcrun simctl list devices available -j | python3 -c 'import json,sys; print(next(d["udid"] for ds in json.load(sys.stdin)["devices"].values() for d in ds if d["name"].startswith("iPhone")))')
+          xcrun simctl boot "$simulator"
+          xcodebuild -project "Little Lemon.xcodeproj" -scheme "Little Lemon" -configuration Debug -destination "id=$simulator" -derivedDataPath build CODE_SIGNING_ALLOWED=NO build
+          xcrun simctl bootstatus "$simulator" -b
+          app="build/Build/Products/Debug-iphonesimulator/Little Lemon.app"
+          xcrun simctl install "$simulator" "$app"
+          xcrun simctl launch "$simulator" org.example.LittleLemonStarter
+          sleep 4
+          mkdir -p preview
+          xcrun simctl io "$simulator" screenshot preview/First-launch.png
+          ditto -c -k --keepParent "$app" preview/Little-Lemon-Simulator.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Little-Lemon-iPhone-Simulator
+          path: preview/
